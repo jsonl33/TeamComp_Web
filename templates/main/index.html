@@ -1,4 +1,13 @@
 {% extends 'base.html' %}
-{% block con %}
-hello main
+{% load embed_video_tags %}
+
+
+
+{% block content %}
+    <h1>Video</h1>
+
+    {% for item in videos %}
+        {% video item.url '640x480' %}
+    {% endfor %}
+    
 {% endblock %}

@@ -38,8 +38,13 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'main.apps.MainConfig',
-    'board.apps.BoardConfig'
+    'board.apps.BoardConfig',
+    'embed_video',
+    
 ]
+
+MEDIA_URL = "/media/"
+MEDIA_ROOT = BASE_DIR/"media"
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

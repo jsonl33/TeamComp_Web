@@ -1,6 +1,11 @@
 from django.shortcuts import render
+from .models import Video
 
 # Create your views here.
 
 def index(request):
-    return render(request, "main/index.html")
+    videos = Video.objects.all()
+    context = {
+        'videos' : videos
+    }
+    return render(request, "main/index.html", context)
