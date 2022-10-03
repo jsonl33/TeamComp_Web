@@ -4,10 +4,16 @@
 
 
 {% block content %}
-    <h1>Video</h1>
-
-    {% for item in videos %}
-        {% video item.url '640x480' %}
-    {% endfor %}
-    
+    <div class="row">
+        <div class="col-6 mt-3">
+            {% for item in videos %}
+                {% video item.url '540x420' %}
+            {% endfor %}
+        </div>
+        <div class="col-6 mt-5">
+            <h5>팀콤프는 웹개발, 앱개발, 영상제작 등의 서비스를 제공하는 기업입니다.</h5>
+            <a class="btn btn-primary mt-2" href="https://www.youtube.com/c/%EC%BA%90%EC%84%9C%EB%A6%B0Style" target="_blank" role="button">채널 구경하기</a>
+        </div>
+        
+    </div>
 {% endblock %}
